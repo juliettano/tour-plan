@@ -374,6 +374,12 @@ template {
   padding-bottom: 40px;
 }
 
+.header__search {
+  margin-right: auto;
+  -webkit-margin-start: 108px;
+          margin-inline-start: 108px;
+}
+
 .search {
   display: -webkit-box;
   display: -ms-flexbox;
