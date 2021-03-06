@@ -380,6 +380,12 @@ template {
           margin-inline-start: 108px;
 }
 
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .search {
   display: -webkit-box;
   display: -ms-flexbox;
