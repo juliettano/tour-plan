@@ -704,9 +704,6 @@ template {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .container {
-    max-width: 279px;
-  }
   .navbar-top {
     padding-top: 27px;
     padding-bottom: 29px;
