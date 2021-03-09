@@ -747,6 +747,9 @@ template {
             order: -1;
     margin-left: 0;
   }
+  .slider {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
