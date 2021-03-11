@@ -11,4 +11,5 @@ const swiper = new Swiper('.swiper-container', {
     onlyInViewport: true,
     pageUpDown: true,
   },
+  spaceBetween: 7,
 });
