@@ -14,6 +14,8 @@ var hotelSlider = new Swiper('.hotel-slider', {
   },
   spaceBetween: 7,
 });
+
+
 var reviewsSlider = new Swiper('.reviews-slider', {
   // Optional parameters
   loop: true,
