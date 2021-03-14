@@ -43,6 +43,10 @@ button::-moz-focus-inner {
   background-position: center;
 }
 
+.parallax-mirror {
+  z-index: 1;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
