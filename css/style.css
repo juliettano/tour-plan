@@ -35,6 +35,13 @@ button::-moz-focus-inner {
   display: none;
 }
 
+.parallax-window {
+  height: 100%;
+  background: transparent;
+  background-attachment: fixed;
+  z-index: -100;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -825,11 +832,6 @@ h1, p {
 
 .newsletter {
   position: relative;
-  padding: 98px 0 87px 0;
-  background-image: url(../img/newsletter-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .newsletter:before {
@@ -855,6 +857,7 @@ h1, p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 98px 0 87px 0;
   max-width: 731px;
   margin: auto;
 }
@@ -1209,9 +1212,6 @@ h2 {
   .mymap {
     width: 100%;
   }
-  .newsletter {
-    padding: 92px 0 93px 0;
-  }
   .newsletter-wrapper {
     max-width: 576px;
     width: 92%;
@@ -1222,6 +1222,7 @@ h2 {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    padding: 92px 0 93px 0;
   }
   .newsletter-title {
     margin-bottom: 37px;
@@ -1268,9 +1269,6 @@ h2 {
   .navbar-top {
     padding-top: 27px;
     padding-bottom: 29px;
-  }
-  .newsletter {
-    padding: 76px 0 83px 0;
   }
   .newsletter-wrapper {
     max-width: 100%;
