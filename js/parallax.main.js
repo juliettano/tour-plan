@@ -1,0 +1,1 @@
+$('.parallax-mirror').parallax({imageSrc: 'img/newsletter-bg.jpg'});
