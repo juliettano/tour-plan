@@ -1136,6 +1136,7 @@ h2 {
 }
 
 .card__button {
+  max-width: 111px;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -1146,6 +1147,9 @@ h2 {
   border-radius: 4px;
   background-color: #ec1f46;
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 1200px) {
@@ -1383,6 +1387,12 @@ h2 {
   .subscribe {
     width: 280px;
   }
+  .subscribe__input {
+    padding-left: 20px;
+  }
+  .card {
+    width: 100%;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -1405,12 +1415,6 @@ h2 {
   }
   .reviews-slider__item {
     padding: 0 30px 37px;
-  }
-  .subscribe__input {
-    padding-left: 20px;
-  }
-  .card {
-    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
