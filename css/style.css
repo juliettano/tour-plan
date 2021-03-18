@@ -1239,6 +1239,7 @@ h2 {
     height: 255px;
   }
   .card:hover {
+    cursor: pointer;
     -webkit-transform: translateY(-7px);
             transform: translateY(-7px);
     -webkit-transition: margin-top 3s;
