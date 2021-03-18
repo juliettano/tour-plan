@@ -59,6 +59,9 @@
     .card
         width: 340px
         height: 255px
+        &:hover
+            transform: translateY(-7px)
+            transition: margin-top 3s
 @media (max-width:767px)
     .container
         max-width: 576px
@@ -161,6 +164,14 @@
             padding-left: 20px
     .card
         width: 100%
+    .activities
+        &__card
+            &:nth-child(2)
+                order: 0
+            &:nth-child(3)
+                order: 1
+            &:nth-child(4)
+                order: 2
 @media (min-width: 320px) and (max-width: 480px)
     .navbar
         &-top
