@@ -95,6 +95,10 @@
             &-form
                 grid-column: span 5
                 grid-row: 4
+        &__disclaimer
+            grid-column: 1 / 6
+        &__links
+            margin-left: 0
 @media (max-width:767px)
     .container
         max-width: 576px
@@ -186,6 +190,8 @@
     .footer
         &__input
             flex-basis: 100%
+        &__disclaimer
+            margin-top: 63px
 @media (max-width:  576px)
     .logo
         width: 99px
@@ -233,6 +239,19 @@
             &-form
                 grid-row: 7
                 grid-column: 1
+        &__button
+            order: 2
+        &__info
+            order: 1
+            flex-basis: 92%
+            margin-bottom: 15px
+        &__disclaimer
+            flex-wrap: wrap
+            margin-top: 10px
+        &__links
+            margin-bottom: 10px
+        &__cards
+            flex-basis: 100%
 @media (min-width: 320px) and (max-width: 480px)
     .navbar
         &-top
@@ -252,3 +271,8 @@
         &-slider
             &__item
                 padding: 0 30px 37px
+    .footer
+        &__input
+            flex-basis: 92%
+        &__message
+            flex-basis: 92%
