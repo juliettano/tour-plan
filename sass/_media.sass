@@ -133,13 +133,19 @@
         &-bottom
             display: none
             position: fixed
-            left: 0
             right: 0
             bottom: 0
             top: 78px
             padding-top: 30px
+            max-width: 440px
+            height: 100vh
+            overflow-y: scroll
+            transition: 0,5s
+            transform: translateX(-100%)
             &--visible
                 display: block
+            &-active
+                transform: translateX(0%)
         &-top
             &__menu-button
                 display: flex

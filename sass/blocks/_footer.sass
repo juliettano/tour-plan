@@ -59,12 +59,18 @@
         font-size: 14px
         line-height: 160%
         color: $footer-text-color
+        &:hover
+            cursor: pointer
+            color: $light
         &--mb-2
             margin-bottom: 20px
     &__icon
         &-wrapper
             min-width: 40px
     &__link
+        text-decoration: none
+        color: inherit
+    &__contacts
         text-decoration: none
         color: inherit
     &__text
@@ -84,7 +90,7 @@
         flex-basis: 48%
         font-size: 12px
     &__message
-        height: 213px
+        height: 123px
         background-color: #fff
         border-radius: 4px
         padding: 18px 23px
@@ -103,6 +109,9 @@
         background-color: $primary
         border-radius: 4px
         border: none
+        &:hover
+            cursor: pointer
+            opacity: 0.6
     &__info
         font-style: normal
         font-weight: bold
@@ -123,5 +132,8 @@
             color: inherit
             padding-right: 8px
             text-decoration: none
+            &:hover
+                cursor: pointer
+                color: red
     &__links
         margin-left: 413px

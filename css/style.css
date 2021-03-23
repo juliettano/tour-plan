@@ -10,6 +10,10 @@ body {
   color: #333333;
 }
 
+.overflow-hidden {
+  overflow-y: hidden;
+}
+
 .container {
   max-width: 1110px;
   margin: 0 auto;
@@ -444,12 +448,22 @@ template {
   line-height: 18px;
 }
 
+.navbar-menu__link:hover {
+  cursor: pointer;
+  color: red;
+}
+
 .navbar-menu__item_mobile_visible {
   display: none;
 }
 
 .logo {
   width: 177px;
+}
+
+.logo:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 .search {
@@ -482,6 +496,11 @@ template {
   width: 65px;
   border: none;
   background-color: #ec1f46;
+}
+
+.search__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 .user {
@@ -534,6 +553,11 @@ template {
 .breadcrumb-list__link {
   text-decoration: none;
   color: inherit;
+}
+
+.breadcrumb-list__link:hover {
+  cursor: pointer;
+  color: red;
 }
 
 h1, p {
@@ -827,7 +851,11 @@ h1, p {
   background-color: #ec1f46;
   border: none;
   color: #fff;
+}
+
+.booking__button:hover {
   cursor: pointer;
+  opacity: 0.6;
 }
 
 .mymap {
@@ -923,6 +951,11 @@ h2 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.subscribe__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 .reviews {
@@ -1160,6 +1193,11 @@ h2 {
   text-overflow: ellipsis;
 }
 
+.card__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 .footer {
   background-color: #0a223d;
   color: #fff;
@@ -1280,6 +1318,11 @@ h2 {
   color: #BDBDBD;
 }
 
+.footer__item:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
 .footer__item--mb-2 {
   margin-bottom: 20px;
 }
@@ -1289,6 +1332,11 @@ h2 {
 }
 
 .footer__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__contacts {
   text-decoration: none;
   color: inherit;
 }
@@ -1315,7 +1363,7 @@ h2 {
 }
 
 .footer__message {
-  height: 213px;
+  height: 123px;
   background-color: #fff;
   border-radius: 4px;
   padding: 18px 23px;
@@ -1337,6 +1385,11 @@ h2 {
   background-color: #ec1f46;
   border-radius: 4px;
   border: none;
+}
+
+.footer__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 .footer__info {
@@ -1371,6 +1424,11 @@ h2 {
   color: inherit;
   padding-right: 8px;
   text-decoration: none;
+}
+
+.footer__disclaimer-link:hover {
+  cursor: pointer;
+  color: red;
 }
 
 .footer__links {
@@ -1578,14 +1636,24 @@ h2 {
   .navbar-bottom {
     display: none;
     position: fixed;
-    left: 0;
     right: 0;
     bottom: 0;
     top: 78px;
     padding-top: 30px;
+    max-width: 440px;
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-transition: 0,5s;
+    transition: 0,5s;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   .navbar-bottom--visible {
     display: block;
+  }
+  .navbar-bottom-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   .navbar-top__menu-button {
     display: -webkit-box;
