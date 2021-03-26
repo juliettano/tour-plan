@@ -49,6 +49,38 @@ textarea {
   resize: none;
 }
 
+.input {
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 0 23px;
+  height: 50px;
+  font-size: 12px;
+}
+
+.message {
+  height: 123px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 18px 23px;
+  border: none;
+  font-size: 12px;
+}
+
+.button {
+  min-width: 160px;
+  min-height: 50px;
+  padding: 18px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  background-color: #ec1f46;
+  border-radius: 4px;
+  border: none;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -422,10 +454,6 @@ template {
 
 .navbar-bottom {
   background-color: #0a223d;
-}
-
-.navbar-menu {
-  width: 100%;
 }
 
 .navbar-menu__list {
@@ -1024,8 +1052,8 @@ h2 {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
+  width: 10px;
+  height: 18px;
   background-repeat: no-repeat;
   background-size: 10px;
   background-position: center;
@@ -1355,41 +1383,15 @@ h2 {
 }
 
 .footer__input {
-  background-color: #fff;
-  border-radius: 4px;
-  border: none;
-  padding: 0 23px;
-  height: 50px;
   margin-bottom: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
-  font-size: 12px;
 }
 
 .footer__message {
-  height: 123px;
-  background-color: #fff;
-  border-radius: 4px;
-  padding: 18px 23px;
-  border: none;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: 22px;
-  font-size: 12px;
-}
-
-.footer__button {
-  min-width: 160px;
-  min-height: 50px;
-  padding: 18px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: #fff;
-  background-color: #ec1f46;
-  border-radius: 4px;
-  border: none;
 }
 
 .footer__button--homepage {
@@ -1445,6 +1447,99 @@ h2 {
 
 .footer__links {
   margin-left: 413px;
+}
+
+.modal__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 143, 223, 0.39);
+  visibility: hidden;
+  z-index: 100;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+
+.modal__overlay--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 478px;
+  padding: 33px 88px;
+  background-color: #0a223d;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  border-radius: 8px;
+  visibility: hidden;
+  z-index: 101;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+
+.modal__dialog--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__close {
+  position: absolute;
+  right: 18px;
+  top: 17px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal__input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.modal__message {
+  width: 100%;
+  min-height: 123px;
+  margin-bottom: 15px;
+}
+
+.modal__info {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #e0e0e0;
+}
+
+.modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media (max-width: 1200px) {
@@ -1652,6 +1747,7 @@ h2 {
     top: 78px;
     padding-top: 30px;
     max-width: 440px;
+    width: 100%;
     height: 100vh;
     overflow-y: scroll;
     -webkit-transition: 0.5s;
@@ -1799,6 +1895,16 @@ h2 {
   .footer__disclaimer {
     margin-top: 63px;
   }
+  .modal__form {
+    width: 100%;
+  }
+  .modal__dialog--visible {
+    padding: 28px 60px;
+  }
+  .modal__button {
+    margin-bottom: 15px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1907,6 +2013,12 @@ h2 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
+  .modal__form {
+    width: 100%;
+  }
+  .modal__dialog--visible {
+    padding: 28px 50px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -1940,6 +2052,10 @@ h2 {
   .footer__message {
     -ms-flex-preferred-size: 92%;
         flex-basis: 92%;
+  }
+  .hotel-slider__button {
+    width: 5px;
+    height: 8px;
   }
 }
 /*# sourceMappingURL=style.css.map */
