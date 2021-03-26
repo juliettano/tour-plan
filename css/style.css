@@ -1371,6 +1371,7 @@ h2 {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: 22px;
+  font-size: 12px;
 }
 
 .footer__button {
