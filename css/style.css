@@ -424,6 +424,10 @@ template {
   background-color: #0a223d;
 }
 
+.navbar-menu {
+  width: 100%;
+}
+
 .navbar-menu__list {
   list-style-type: none;
   margin: 0;
@@ -674,8 +678,8 @@ h1, p {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 99;
-  width: 30px;
-  height: 30px;
+  width: 10px;
+  height: 18px;
   border: none;
   cursor: pointer;
   background-repeat: no-repeat;
