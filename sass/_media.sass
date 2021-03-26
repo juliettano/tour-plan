@@ -33,7 +33,7 @@
             line-height: 15px
     .search
         &__input
-            width: 340px
+            width: 100%
     .hotel
         &-grid
             flex-direction: column
@@ -131,7 +131,6 @@
             flex-direction: column
             justify-content: center
         &-bottom
-            display: none
             position: fixed
             right: 0
             bottom: 0
@@ -140,10 +139,8 @@
             max-width: 440px
             height: 100vh
             overflow-y: scroll
-            transition: 0,5s
-            transform: translateX(-100%)
-            &--visible
-                display: block
+            transition: 0.5s
+            transform: translateX(100%)
             &-active
                 transform: translateX(0%)
         &-top
@@ -299,6 +296,8 @@
             flex-basis: 100%
 @media (min-width: 320px) and (max-width: 480px)
     .navbar
+        &-bottom
+            top: 74px
         &-top
             padding-top: 27px
             padding-bottom: 29px

@@ -1481,7 +1481,7 @@ h2 {
     line-height: 15px;
   }
   .search__input {
-    width: 340px;
+    width: 100%;
   }
   .hotel-grid {
     -webkit-box-orient: vertical;
@@ -1634,7 +1634,6 @@ h2 {
             justify-content: center;
   }
   .navbar-bottom {
-    display: none;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -1643,13 +1642,10 @@ h2 {
     max-width: 440px;
     height: 100vh;
     overflow-y: scroll;
-    -webkit-transition: 0,5s;
-    transition: 0,5s;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  .navbar-bottom--visible {
-    display: block;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   .navbar-bottom-active {
     -webkit-transform: translateX(0%);
@@ -1897,6 +1893,9 @@ h2 {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .navbar-bottom {
+    top: 74px;
+  }
   .navbar-top {
     padding-top: 27px;
     padding-bottom: 29px;
