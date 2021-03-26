@@ -79,6 +79,7 @@ textarea {
   background-color: #ec1f46;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
