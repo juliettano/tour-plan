@@ -36,7 +36,6 @@ var reviewsSlider = new Swiper('.reviews-slider', {
 
 var menuButton = document.querySelector(".menu-button");
 menuButton.addEventListener("click", function () {
-  console.log("Клик по кнопке меню");
   document.querySelector(".navbar-bottom").classList.toggle('navbar-bottom--visible');
   document.querySelector("body").classList.toggle('overflow-hidden');
   document.querySelector(".navbar-bottom").classList.toggle('navbar-bottom-active');
@@ -44,20 +43,19 @@ menuButton.addEventListener("click", function () {
 
 var modalButton = $('[data-toggle=modal]');
 var closeModalButton = $(".modal__close");
-var closeModalOverlay = $(".modal__overlay");
 modalButton.on("click", openModal);
 closeModalButton.on("click", closeModal);
-closeModalOverlay.on("click", closeModal);
 
 function openModal() {
   var targetModal = $(this).attr("data-href");
   $(targetModal).find(".modal__overlay").addClass("modal__overlay--visible");
   $(targetModal).find(".modal__dialog").addClass("modal__dialog--visible");
 }
-overlay.addEventListener("click", function () {
+function closeModal(event) {
+  event.preventDefault();
   var modalOverlay = $(".modal__overlay");
   var modalDialog = $(".modal__dialog");
-  modalOverlay.removeClass(".modal__overlay--visible");
-  modalDialog.removeClass(".modal__dialog--visible");
-});
+  modalOverlay.removeClass("modal__overlay--visible");
+  modalDialog.removeClass("modal__dialog--visible");
+}
 });
